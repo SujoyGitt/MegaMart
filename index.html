@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eccomerce website</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"  rel="stylesheet"/>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <script type="module" crossorigin src="/MegaMart/assets/style-CrljJIUu.js"></script>
+    <script type="module" crossorigin src="/MegaMart/assets/main-CgCm368H.js"></script>
+    <link rel="stylesheet" crossorigin href="/MegaMart/assets/style-BDTVmW94.css">
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-2 top-bar-content">
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 top-bar-item">
+              <span class="text-sm">Welcome to worldwide Megamart!</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 nav-item top-bar-item">
+              <i class="fas fa-map-marker-alt text-cyan-500"></i>
+              <span class="text-sm">Deliver to <strong>423651</strong></span>
+            </div>
+            <div class="flex items-center gap-2 nav-item top-bar-item">
+              <i class="fas fa-truck text-cyan-500"></i>
+              <span class="text-sm">Track your order</span>
+            </div>
+            <div class="flex items-center gap-2 nav-item top-bar-item">
+              <i class="fas fa-tags text-cyan-500"></i>
+              <span class="text-sm">All Offers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar-container relative">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Logo -->
+          <div class="flex items-center gap-4">
+            <div class="logo-text">MegaMart</div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="search-container hidden md:block">
+            <div class="relative">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" class="search-input" placeholder="Search essentials, groceries and more..."/>
+              <i class="fa-solid fa-list"></i>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation Items -->
+          <div class="desktop-nav flex items-center gap-6">
+            <div class="nav-item">
+              <i class="fas fa-user"></i>
+              <span>Sign Up/Sign In</span>
+            </div>
+            <a href="addToCart.html" class="nav-item shopping_cart">
+              <i class="fas fa-shopping-cart text-cyan-500"></i>
+              <span>Cart</span>
+            </a>
+          </div>
+
+          <!-- Mobile Cart Icon -->
+          <div class="md:hidden">
+            <div class="nav-item">
+              <i class="fas fa-shopping-cart text-cyan-500 text-xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Search (Below main nav on mobile) -->
+        <div class="md:hidden pb-4">
+          <div class="search-container">
+            <div class="relative">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search essentials, groceries and more..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <aside class="side-menu p-5" id="home">
+      <div class="bg">
+        <div class="span bg1"></div>
+        <div class="span bg2"></div>
+        <div class="span bg3"></div>
+      </div>
+      <div class="menu-header flex items-center justify-between">
+        <div class="logo text-3xl text-white">MegaMart</div>
+        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+
+      <div class="menu-galary d-flex justify-content-between my-5 py-3 flex-wrap" >
+        <ul class="menu ps-0 list-unstyled">
+          <li class="py-3"><a href="index.html">Home</a></li>
+          <li class="py-3"><a href="about.html">About</a></li>
+          <li class="py-3"><a href="product.html">Products</a></li>
+          <li class="py-3"><a href="contact.html">Contact</a></li>
+        </ul>
+        
+      </div>
+      <div class="social-media flex justify-center gap-4">
+        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </aside>
+
+    <!-- Hero Slider -->
+    <div class="hero-slider container mx-auto">
+      <div class="owl-carousel owl-theme" id="heroSlider">
+        <!-- Slide 1 -->
+        <div class="item">
+          <div class="slide-content">
+            <div class="slide-text">
+              <p class="slide-subtitle">Best Deal Online on smart watches</p>
+              <h1 class="slide-title">SMART WEARABLE.</h1>
+              <p class="slide-discount">UP to 80% OFF</p>
+            </div>
+            <div class="slide-image">
+              <div class="watch-container">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop&crop=center"
+                  alt="Smart Watch"
+                  class="watch-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="item">
+          <div class="slide-content">
+            <div class="slide-text">
+              <p class="slide-subtitle">Premium Collection 2024</p>
+              <h1 class="slide-title">FITNESS TRACKER.</h1>
+              <p class="slide-discount">UP to 70% OFF</p>
+            </div>
+            <div class="slide-image">
+              <div class="watch-container">
+                <img
+                  src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=400&fit=crop&crop=center"
+                  alt="Fitness Tracker"
+                  class="watch-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="item">
+          <div class="slide-content">
+            <div class="slide-text">
+              <p class="slide-subtitle">Best Deal Online on smart watches</p>
+              <h1 class="slide-title">SMART WEARABLE.</h1>
+              <p class="slide-discount">UP to 80% OFF</p>
+            </div>
+            <div class="slide-image">
+              <div class="watch-container">
+                <img
+                  src="/MegaMart/assets/banner-img-QgB-hWGs.png"
+                  alt="Sport Watch"
+                  class="watch-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product mt-16">
+      <!-- Section Header -->
+      <div class="section-header container mx-auto">
+        <h2 class="section-title">
+          Grab the best deal on <span class="highlight">Our Smart Phone</span>
+        </h2>
+        <a href="#" class="view-all">
+          View All <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+
+      <!-- Product Cards -->
+      <div class="cards-container container mx-auto">
+        <!-- Card 1 - Galaxy S22 Ultra -->
+        <template class="productTemplate">
+          <div class="product-card" id="productCard">
+            <div class="product-image">
+              <img class="product-img" src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=400&h=400&fit=crop&crop=center" alt="Galaxy S22 Ultra" />
+              <div class="discount-badge">56%</div>
+              <button class="add-to-cart-icon">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Galaxy S22 Ultra</h3>
+
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(4.5)</span>
+              </div>
+
+              <div class="stock-status in-stock">Total Available Stock : <span></span></div>
+
+              <p class="description">
+                Experience next-gen performance with the Galaxy S22 Ultra. 108MP
+                camera, AMOLED display, 5000mAh battery.
+              </p>
+
+              <div class="price-container">
+                <span class="current-price">₹32999</span>
+                <span class="original-price">₹74999</span>
+              </div>
+              <p class="savings">Save - ₹32999</p>
+
+              <div class="flex items-center justify-between flex-wrap ">
+               <div class="quantity-selector">
+                 <button type="button" class="decrement">-</button>
+                 <p class="quantity"   >1</p> 
+                 <button type="button" class="increment">+</button>
+               </div>
+
+
+               <button class="add-to-cart-btn mt-4 xl:mt-0">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+               </button>
+              </div>
+             
+
+            </div>
+          </div>
+        </template>
+        
+      </div>
+    </div>
+
+    <section class="features-section mt-8">
+      <!-- Floating Particles -->
+      <div class="particle" style="top: 10%; left: 10%"></div>
+      <div class="particle" style="top: 20%; left: 80%"></div>
+      <div class="particle" style="top: 70%; left: 20%"></div>
+      <div class="particle" style="top: 60%; left: 90%"></div>
+      <div class="particle" style="top: 30%; left: 50%"></div>
+      <div class="particle" style="top: 80%; left: 70%"></div>
+      <div class="particle" style="top: 10%; left: 10%"></div>
+      <div class="particle" style="top: 20%; left: 80%"></div>
+      <div class="particle" style="top: 70%; left: 20%"></div>
+      <div class="particle" style="top: 60%; left: 90%"></div>
+      <div class="particle" style="top: 30%; left: 50%"></div>
+      <div class="particle" style="top: 80%; left: 70%"></div>
+
+      <div class="features-container container mx-auto">
+        <div class="features-grid px-6">
+          <!-- Worldwide Shipping -->
+          <div class="feature-card shipping-card">
+            <div class="feature-icon shipping-icon">🚚</div>
+            <h3 class="feature-title">Worldwide Shipping</h3>
+            <p class="feature-description">Order Above $100</p>
+            <div class="feature-progress">
+              <div class="progress-bar shipping-progress"></div>
+            </div>
+          </div>
+
+          <!-- Easy Returns -->
+          <div class="feature-card returns-card">
+            <div class="feature-icon returns-icon">🔄</div>
+            <h3 class="feature-title">Easy 30 Day Returns</h3>
+            <p class="feature-description">Back Returns In 7 Days</p>
+            <div class="feature-progress">
+              <div class="progress-bar returns-progress"></div>
+            </div>
+          </div>
+
+          <!-- Money Back Guarantee -->
+          <div class="feature-card guarantee-card">
+            <div class="feature-icon guarantee-icon">💰</div>
+            <h3 class="feature-title">Money Back Guarantee</h3>
+            <p class="feature-description">Guarantee Within In 30 Days</p>
+            <div class="feature-progress">
+              <div class="progress-bar guarantee-progress"></div>
+            </div>
+          </div>
+
+          <!-- Online Support -->
+          <div class="feature-card support-card">
+            <div class="feature-icon support-icon">🎧</div>
+            <h3 class="feature-title">Easy Online Support</h3>
+            <p class="feature-description">24/7 Any Time Support</p>
+            <div class="feature-progress">
+              <div class="progress-bar support-progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="categories-section mt-8">
+      <!-- Section Header -->
+      <div class="section-header container mx-auto">
+        <h2 class="section-title">
+          Shop From <span class="highlight">Top Categories</span>
+        </h2>
+        <a href="#" class="view-all">
+          View All <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="categories-grid container mx-auto">
+        <template class="categoryTemplate">
+         <div class="category-item active" data-category="mobile">
+          <div class="category-icon active">
+            <img
+              src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=100&h=100&fit=crop&crop=center"
+              alt="Mobile"
+            />
+          </div>
+          <span class="category-name">Mobile</span>
+         </div>
+        </template>
+      </div>
+    </div>
+
+    <div class="electronics-carousel mt-8">
+      <!-- Section Header -->
+      <div class="section-header container mx-auto">
+        <h2 class="section-title">
+          Top <span class="highlight"> Electronics Brands</span>
+        </h2>
+        <a href="#" class="view-all">
+          View All <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="carousel-container container mx-auto">
+        <div class="owl-carousel owl-theme brands-carousel">
+          <!-- iPhone Card -->
+          <div class="brand-card iphone">
+            <div class="brand-content">
+              <div class="brand-label">IPHONE</div>
+              <div class="brand-logo">
+                <div class="logo-icon">🍎</div>
+                <div class="discount-text">UP to 80% OFF</div>
+              </div>
+            </div>
+            <div class="phone-image">📱</div>
+          </div>
+
+          <!-- Realme Card -->
+          <div class="brand-card realme">
+            <div class="brand-content">
+              <div class="brand-label">REALME</div>
+              <div class="brand-logo">
+                <div
+                  class="realme-logo"
+                  style="
+                    background: white;
+                    padding: 4px 8px;
+                    border-radius: 6px;
+                    color: #f59e0b;
+                    font-weight: bold;
+                    font-size: 12px;
+                  "
+                >
+                  realme
+                </div>
+                <div class="discount-text">UP to 80% OFF</div>
+              </div>
+            </div>
+            <div class="phone-image">📱</div>
+          </div>
+
+          <!-- Oppo Card -->
+          <div class="brand-card oppo">
+            <div class="brand-content">
+              <div class="brand-label">OPPO</div>
+              <div class="brand-logo">
+                <div
+                  class="logo-text oppo-text"
+                  style="
+                    background: rgba(255, 255, 255, 0.2);
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    color: white;
+                    font-weight: bold;
+                  "
+                >
+                  OPPO
+                </div>
+                <div class="discount-text">UP to 80% OFF</div>
+              </div>
+            </div>
+            <div class="phone-image">📱</div>
+          </div>
+
+          <!-- Xiaomi Card -->
+          <div class="brand-card xiaomi">
+            <div class="brand-content">
+              <div class="brand-label">XIAOMI</div>
+              <div class="brand-logo">
+                <div class="logo-icon">Mi</div>
+                <div class="discount-text">UP to 80% OFF</div>
+              </div>
+            </div>
+            <div class="phone-image">📱</div>
+          </div>
+
+          <!-- Redmi Card -->
+          <div class="brand-card redmi">
+            <div class="brand-content">
+              <div class="brand-label">REDMI</div>
+              <div class="brand-logo">
+                <div
+                  class="logo-text redmi-text"
+                  style="
+                    background: rgba(255, 255, 255, 0.2);
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    color: white;
+                    font-weight: bold;
+                  "
+                >
+                  REDMI
+                </div>
+                <div class="discount-text">UP to 80% OFF</div>
+              </div>
+            </div>
+            <div class="phone-image">📱</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="daily-essentials-section mt-8">
+      <!-- Section Header -->
+      <div class="section-header container mx-auto">
+        <h2 class="section-title">
+          Daily <span class="highlight"> Essentials</span>
+        </h2>
+        <a href="#" class="view-all">
+          View All <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+      <!-- Essentials Grid -->
+      <div class="essentials-grid container mx-auto">
+        <!-- Daily Essentials Card (Featured) -->
+        <div class="essential-card daily-essentials-card featured">
+          <div class="card-image">🛒</div>
+          <div class="card-title">Daily Essentials</div>
+          <div class="card-discount">UP to 50% OFF</div>
+        </div>
+
+        <!-- Vegetables Card -->
+        <div class="essential-card vegetables-card">
+          <div class="card-image">🥕</div>
+          <div class="card-title">Vegetables</div>
+          <div class="card-discount">UP to 50% OFF</div>
+        </div>
+
+        <!-- Fruits Card -->
+        <div class="essential-card fruits-card">
+          <div class="card-image">🍎</div>
+          <div class="card-title">Fruits</div>
+          <div class="card-discount">UP to 50% OFF</div>
+        </div>
+
+        <!-- Strawberry Card -->
+        <div class="essential-card strawberry-card">
+          <div class="card-image">🍓</div>
+          <div class="card-title">Strawberry</div>
+          <div class="card-discount">UP to 50% OFF</div>
+        </div>
+
+        <!-- Mango Card -->
+        <div class="essential-card mango-card">
+          <div class="card-image">🥭</div>
+          <div class="card-title">Mango</div>
+          <div class="card-discount">UP to 50% OFF</div>
+        </div>
+
+        <!-- Cherry Card -->
+        <div class="essential-card cherry-card">
+          <div class="card-image">🍒</div>
+          <div class="card-title">Cherry</div>
+          <div class="card-discount">UP to 50% OFF</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="why-choose-section mt-16">
+      <div class="section-container">
+        <!-- Header -->
+        <div class="why-choose-section-header">
+          <h2 class="section-title">Why Choose Us?</h2>
+          <p class="section-subtitle">
+            We're not just another e-commerce store. We're your trusted partner
+            in finding quality products at unbeatable prices with exceptional
+            service.
+          </p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="features-grid">
+          <!-- Premium Quality -->
+          <div class="feature-card">
+            <div class="feature-icon quality-icon">🏆</div>
+            <h3 class="feature-title">Premium Quality</h3>
+            <p class="feature-description">
+              Every product goes through rigorous quality checks. We partner
+              with trusted brands and verified suppliers to ensure you get only
+              the best.
+            </p>
+          </div>
+
+          <!-- Best Prices -->
+          <div class="feature-card">
+            <div class="feature-icon price-icon">💰</div>
+            <h3 class="feature-title">Unbeatable Prices</h3>
+            <p class="feature-description">
+              Our direct partnerships with manufacturers and bulk buying power
+              allow us to offer competitive prices without compromising on
+              quality.
+            </p>
+          </div>
+
+          <!-- Fast Delivery -->
+          <div class="feature-card">
+            <div class="feature-icon delivery-icon">⚡</div>
+            <h3 class="feature-title">Lightning Fast Delivery</h3>
+            <p class="feature-description">
+              Same-day shipping for orders before 2 PM. Track your package in
+              real-time with our advanced logistics network across the country.
+            </p>
+          </div>
+
+          <!-- 24/7 Support -->
+          <div class="feature-card">
+            <div class="feature-icon support-icon">🎧</div>
+            <h3 class="feature-title">24/7 Expert Support</h3>
+            <p class="feature-description">
+              Our dedicated support team is always ready to help. Get instant
+              answers via chat, email, or phone from real humans who care.
+            </p>
+          </div>
+
+          <!-- Secure Shopping -->
+          <div class="feature-card">
+            <div class="feature-icon security-icon">🔒</div>
+            <h3 class="feature-title">100% Secure Shopping</h3>
+            <p class="feature-description">
+              Your data is protected with bank-level encryption. Shop with
+              confidence knowing your personal and payment information is safe.
+            </p>
+          </div>
+
+          <!-- Wide Variety -->
+          <div class="feature-card">
+            <div class="feature-icon variety-icon">🎯</div>
+            <h3 class="feature-title">Endless Variety</h3>
+            <p class="feature-description">
+              From electronics to fashion, home & garden to beauty products -
+              find everything you need in one place with millions of products.
+            </p>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <button class="cta-button">Start Shopping Now →</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-wave"></div>
+      <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Brand Section -->
+          <div class="footer-brand">
+            <div class="brand-logo">MegaMart</div>
+            <p class="brand-tagline">
+              Your ultimate shopping destination for premium products at
+              unbeatable prices. Experience the future of e-commerce with us.
+            </p>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="#" class="social-link facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-link instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="social-link linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Shop Categories -->
+          <div class="footer-column">
+            <h3 class="column-title">Shop</h3>
+            <ul class="footer-links">
+              <li class="footer-link"><a href="#">Electronics</a></li>
+              <li class="footer-link"><a href="#">Fashion</a></li>
+              <li class="footer-link"><a href="#">Home & Garden</a></li>
+              <li class="footer-link"><a href="#">Sports & Outdoors</a></li>
+              <li class="footer-link"><a href="#">Beauty & Health</a></li>
+              <li class="footer-link"><a href="#">Books & Media</a></li>
+              <li class="footer-link"><a href="#">Toys & Games</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Care -->
+          <div class="footer-column">
+            <h3 class="column-title">Customer Care</h3>
+            <ul class="footer-links">
+              <li class="footer-link"><a href="#">Contact Us</a></li>
+              <li class="footer-link"><a href="#">FAQ</a></li>
+              <li class="footer-link"><a href="#">Shipping Info</a></li>
+              <li class="footer-link"><a href="#">Returns</a></li>
+              <li class="footer-link"><a href="#">Size Guide</a></li>
+              <li class="footer-link"><a href="#">Track Order</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-column">
+            <h3 class="column-title">Company</h3>
+            <ul class="footer-links">
+              <li class="footer-link"><a href="#">About Us</a></li>
+              <li class="footer-link"><a href="#">Careers</a></li>
+              <li class="footer-link"><a href="#">Press</a></li>
+              <li class="footer-link"><a href="#">Investors</a></li>
+              <li class="footer-link"><a href="#">Sustainability</a></li>
+              <li class="footer-link"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            © 2024 MegaMart. All rights reserved. | Privacy Policy | Terms of
+            Service
+          </div>
+          <div class="payment-methods">
+            <span class="payment-text">We Accept:</span>
+            <div class="payment-icon">VISA</div>
+            <div class="payment-icon">MC</div>
+            <div class="payment-icon">AMEX</div>
+            <div class="payment-icon">PP</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.3.10/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>
