@@ -1,7 +1,6 @@
 import { categoryProductContainer, showProductContainer } from "../homeProductCard";
 import "./style.css";
 
-
 document.querySelector(".mobile-menu-btn").addEventListener("click", () => {
   document.querySelector(".side-menu").classList.add("side-menu-active");
 });
@@ -79,13 +78,11 @@ async function main() {
   const catRes = await fetch("https://dummyjson.com/products/categories");
   const categories = await catRes.json();
 
-  const limitedCategories = categories.slice(0, 7); // এখানেই limit করো
-
-
-
+  const limitedCategories = categories.slice(0, 7);// limit 7
 
   showProductContainer(data.products);
   categoryProductContainer(limitedCategories)
 }
 
 main();
+

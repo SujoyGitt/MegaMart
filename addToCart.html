@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eccomerce website</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"  rel="stylesheet"/>
+
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-2 top-bar-content">
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 top-bar-item">
+              <span class="text-sm">Welcome to worldwide Megamart!</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 nav-item top-bar-item">
+              <i class="fas fa-map-marker-alt text-cyan-500"></i>
+              <span class="text-sm">Deliver to <strong>423651</strong></span>
+            </div>
+            <div class="flex items-center gap-2 nav-item top-bar-item">
+              <i class="fas fa-truck text-cyan-500"></i>
+              <span class="text-sm">Track your order</span>
+            </div>
+            <div class="flex items-center gap-2 nav-item top-bar-item">
+              <i class="fas fa-tags text-cyan-500"></i>
+              <span class="text-sm">All Offers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar-container relative">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Logo -->
+          <div class="flex items-center gap-4">
+            <div class="logo-text">MegaMart</div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="search-container hidden md:block">
+            <div class="relative">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" class="search-input" placeholder="Search essentials, groceries and more..."/>
+              <i class="fa-solid fa-list"></i>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation Items -->
+          <div class="desktop-nav flex items-center gap-6">
+            <div class="nav-item">
+              <i class="fas fa-user"></i>
+              <span>Sign Up/Sign In</span>
+            </div>
+            <a href="addToCart.html" class="nav-item shopping_cart">
+              <i class="fas fa-shopping-cart text-cyan-500"></i>
+              <span>Cart</span>
+            </a>
+          </div>
+
+          <!-- Mobile Cart Icon -->
+          <div class="md:hidden">
+            <div class="nav-item">
+              <i class="fas fa-shopping-cart text-cyan-500 text-xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Search (Below main nav on mobile) -->
+        <div class="md:hidden pb-4">
+          <div class="search-container">
+            <div class="relative">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search essentials, groceries and more..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <aside class="side-menu p-5" id="home">
+      <div class="bg">
+        <div class="span bg1"></div>
+        <div class="span bg2"></div>
+        <div class="span bg3"></div>
+      </div>
+      <div class="menu-header flex items-center justify-between">
+        <div class="logo text-3xl text-white">MegaMart</div>
+        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+
+      <div class="menu-galary d-flex justify-content-between my-5 py-3 flex-wrap" >
+        <ul class="menu ps-0 list-unstyled">
+          <li class="py-3"><a href="index.html">Home</a></li>
+          <li class="py-3"><a href="about.html">About</a></li>
+          <li class="py-3"><a href="product.html">Products</a></li>
+          <li class="py-3"><a href="contact.html">Contact</a></li>
+        </ul>
+        
+      </div>
+      <div class="social-media flex justify-center gap-4">
+        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </aside>
+
+
+    <div class="cart-container container mx-auto my-8">
+        <!-- Header -->
+        <div class="cart-header text-white p-6 md:p-8">
+            <div class="text-center">
+                <h1 class="text-2xl md:text-3xl font-bold mb-2 flex items-center justify-center gap-3">
+                    <i class="fas fa-shopping-cart"></i>
+                    Shopping Cart
+                </h1>
+                <p class="text-blue-100 text-sm md:text-base">Review your selected items</p>
+            </div>
+        </div>
+
+        <!-- Cart Items -->
+        <div class="p-6 md:p-8 space-y-6 cartTemplateContainer">
+            
+            <template class="cartTemplate">
+              <div class="cart-item grid grid-cols-1 md:grid-cols-5 items-center gap-4 md:gap-6 p-4 md:p-6 rounded-2xl">
+                <div class="item-image w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&h=200&fit=crop" alt="Laptop" class="w-full h-full object-cover transition-transform duration-300">
+                </div>
+                
+                <div class="item-details space-y-2">
+                  <div class="flex items-center gap-2 mb-1"><span class="category-badge text-xs px-3 py-1 rounded-full font-medium">Computers</span></div>
+                  <h3 class="text-lg font-semibold text-gray-800">Premium Laptop</h3>
+                  <p class="text-sm text-gray-500">High-performance computing device</p>
+                </div>
+
+                <div class="price-tag text-xl md:text-2xl font-bold ">₹69,999</div>
+
+                <div class="quantity-control flex justify-center items-center gap-1 p-1 rounded-xl">
+                    <button class="quantity-btn cartDec  flex items-center justify-center hover:shadow-lg">
+                        <i class="fas fa-minus text-xs cartDec"></i>
+                    </button>
+                    <span class="w-12 text-center font-semibold text-gray-700 cartQnt">7</span>
+                    <button class="quantity-btn cartInc flex items-center justify-center hover:shadow-lg">
+                        <i class="fas fa-plus text-xs cartInc"></i>
+                    </button>
+                </div>
+
+                <button class="remove-btn text-white px-4 py-2 rounded-xl font-medium hover:shadow-lg">
+                    <i class="fas fa-trash-alt text-sm"></i>
+                    <span class="hidden md:inline">Remove</span>
+                </button>
+              </div>
+            </template>
+
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary-card m-6 md:m-8 p-6 md:p-8 rounded-2xl">
+            <div class="grid md:grid-cols-2 gap-6 items-center">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center text-lg">
+                        <span class="text-gray-600">Subtotal:</span>
+                        <span class="font-semibold text-gray-800 sub_total">₹6,14,991</span>
+                    </div>
+                    <div class="flex justify-between items-center text-lg">
+                        <span class="text-gray-600">Shipping:</span>
+                        <span class="font-semibold text-green-600 shipping_price">$10</span>
+                    </div>
+                    <div class="flex justify-between items-center text-lg">
+                        <span class="text-gray-600">Tax:</span>
+                        <span class="font-semibold text-gray-800">Free</span>
+                    </div>
+                    <hr class="border-gray-200">
+                    <div class="flex justify-between items-center text-xl">
+                        <span class="font-bold text-gray-800">Total:</span>
+                        <span class="font-bold text-2xl total-tag">₹6,76,490</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <button class="checkout-btn text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-3 hover:shadow-xl">
+                        <i class="fas fa-credit-card"></i>
+                        Proceed to Checkout
+                    </button>
+                    <a href="index.html" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-gray-400 transition-colors">
+                        Continue Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <footer class="footer">
+      <div class="footer-wave"></div>
+      <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Brand Section -->
+          <div class="footer-brand">
+            <div class="brand-logo">MegaMart</div>
+            <p class="brand-tagline">
+              Your ultimate shopping destination for premium products at
+              unbeatable prices. Experience the future of e-commerce with us.
+            </p>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="#" class="social-link facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-link instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="social-link linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Shop Categories -->
+          <div class="footer-column">
+            <h3 class="column-title">Shop</h3>
+            <ul class="footer-links">
+              <li class="footer-link"><a href="#">Electronics</a></li>
+              <li class="footer-link"><a href="#">Fashion</a></li>
+              <li class="footer-link"><a href="#">Home & Garden</a></li>
+              <li class="footer-link"><a href="#">Sports & Outdoors</a></li>
+              <li class="footer-link"><a href="#">Beauty & Health</a></li>
+              <li class="footer-link"><a href="#">Books & Media</a></li>
+              <li class="footer-link"><a href="#">Toys & Games</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Care -->
+          <div class="footer-column">
+            <h3 class="column-title">Customer Care</h3>
+            <ul class="footer-links">
+              <li class="footer-link"><a href="#">Contact Us</a></li>
+              <li class="footer-link"><a href="#">FAQ</a></li>
+              <li class="footer-link"><a href="#">Shipping Info</a></li>
+              <li class="footer-link"><a href="#">Returns</a></li>
+              <li class="footer-link"><a href="#">Size Guide</a></li>
+              <li class="footer-link"><a href="#">Track Order</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-column">
+            <h3 class="column-title">Company</h3>
+            <ul class="footer-links">
+              <li class="footer-link"><a href="#">About Us</a></li>
+              <li class="footer-link"><a href="#">Careers</a></li>
+              <li class="footer-link"><a href="#">Press</a></li>
+              <li class="footer-link"><a href="#">Investors</a></li>
+              <li class="footer-link"><a href="#">Sustainability</a></li>
+              <li class="footer-link"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            © 2024 MegaMart. All rights reserved. | Privacy Policy | Terms of
+            Service
+          </div>
+          <div class="payment-methods">
+            <span class="payment-text">We Accept:</span>
+            <div class="payment-icon">VISA</div>
+            <div class="payment-icon">MC</div>
+            <div class="payment-icon">AMEX</div>
+            <div class="payment-icon">PP</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <script type="module" src="/showAddToCards.js"></script>
+  </body>
+</html>
